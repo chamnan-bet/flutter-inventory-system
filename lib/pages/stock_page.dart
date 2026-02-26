@@ -377,7 +377,7 @@ class _StockPageState extends State<StockPage> {
             label: 'Products',
           ),
           NavigationDestination(
-            icon: Icon(Icons.warehouse_outlined),
+            icon: Icon(Icons.swap_vert_rounded),
             label: 'Stock',
           ),
           NavigationDestination(

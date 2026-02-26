@@ -243,7 +243,7 @@ class _DashboardPageState extends State<DashboardPage> {
             label: 'Products',
           ),
           NavigationDestination(
-            icon: Icon(Icons.warehouse_outlined),
+            icon: Icon(Icons.swap_vert_rounded),
             label: 'Stock',
           ),
           NavigationDestination(

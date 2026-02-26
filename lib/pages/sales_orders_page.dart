@@ -385,7 +385,7 @@ class _SalesOrdersPageState extends State<SalesOrdersPage> {
                   child: TextButton.icon(
                     onPressed: _resetDemo,
                     icon: const Icon(Icons.restore, size: 18),
-                    label: const Text('Reset demo data'),
+                    label: const Text('Reset'),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -533,80 +533,12 @@ class _SalesOrdersPageState extends State<SalesOrdersPage> {
                 style: const TextStyle(color: Color(0xFF7A7A7A)),
               ),
               const SizedBox(height: 12),
-
-              //   if (actions.isNotEmpty)
-              //     // Row(
-              //       children:
-              //           actions
-              //               .map((a) {
-              //                 switch (a) {
-              //                   case _OrderAction.process:
-              //                     return Expanded(
-              //                       child: OutlinedButton(
-              //                         onPressed: () {
-              //                           Navigator.pop(ctx);
-              //                           _processOrder(index);
-              //                         },
-              //                         child: const Text('Process Order'),
-              //                       ),
-              //                     );
-              //                   case _OrderAction.complete:
-              //                     return Expanded(
-              //                       child: ElevatedButton(
-              //                         onPressed: () {
-              //                           Navigator.pop(ctx);
-              //                           _completeOrder(index);
-              //                         },
-              //                         style: ElevatedButton.styleFrom(
-              //                           backgroundColor: const Color(0xFF10B981),
-              //                           foregroundColor: Colors.white,
-              //                         ),
-              //                         child: const Text('Mark as Completed'),
-              //                       ),
-              //                     );
-              //                   case _OrderAction.cancel:
-              //                     return Expanded(
-              //                       child: OutlinedButton(
-              //                         onPressed: () {
-              //                           Navigator.pop(ctx);
-              //                           _cancelOrder(index);
-              //                         },
-              //                         style: OutlinedButton.styleFrom(
-              //                           side: const BorderSide(
-              //                             color: Color(0xFFD32F2F),
-              //                           ),
-              //                           foregroundColor: const Color(0xFFD32F2F),
-              //                         ),
-              //                         child: const Text('Cancel'),
-              //                       ),
-              //                     );
-              //                 }
-              //               })
-              //               .expand((w) sync* {
-              //                 yield w;
-              //                 yield const SizedBox(width: 10);
-              //               })
-              //               .toList()
-              //             ..removeLast(),
-              //     ),
-            ],
+             ],
           ),
         );
       },
     );
   }
-
-  // List<_OrderAction> _actionsFor(OrderStatus s) {
-  //   switch (s) {
-  //     case OrderStatus.pending:
-  //       return const [_OrderAction.process, _OrderAction.cancel];
-  //     case OrderStatus.processing:
-  //       return const [_OrderAction.complete, _OrderAction.cancel];
-  //     case OrderStatus.completed:
-  //     case OrderStatus.cancelled:
-  //       return const [];
-  //   }
-  // }
 
   // ====== New Order Bottom Sheet ======
   Future<SalesOrder?> _openOrderForm() async {
@@ -888,19 +820,6 @@ class _SalesOrdersPageState extends State<SalesOrdersPage> {
 
     return result;
   }
-
-  // ====== Helpers ======
-  // List<_OrderAction> _actionsFor(OrderStatus s) {
-  //   switch (s) {
-  //     case OrderStatus.pending:
-  //       return const [_OrderAction.process, _OrderAction.cancel];
-  //     case OrderStatus.processing:
-  //       return const [_OrderAction.complete, _OrderAction.cancel];
-  //     case OrderStatus.completed:
-  //     case OrderStatus.cancelled:
-  //       return const [];
-  //   }
-  // }
 
   String _generateOrderCode(List<SalesOrder> orders) {
     final year = DateTime.now().year;
